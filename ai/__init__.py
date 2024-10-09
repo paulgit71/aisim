@@ -47,7 +47,7 @@ class Group(BaseGroup):
 
 def make_field(label=None):
     return models.IntegerField(
-        label='<b>If No, Please provide your forecast here</b>', null=True, blank=True, min=300, max=600
+        label='<b>If No, Please provide your forecast here</b>', null=True, blank=True, min=100, max=10000
     )
 
 
