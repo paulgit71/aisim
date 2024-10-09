@@ -144,7 +144,7 @@ class Player(BasePlayer):
     cat1 = models.IntegerField(label='1. If John can drink one barrel of water in 6 days, and Mary can drink one barrel of water in 12 days, how many days would it take them to drink one barrel of water together?',)
     cat2 = models.IntegerField(label='2. Jerry received both the 15th highest and the 15th lowest mark in the class. How many students are in the class?',)
     cat3 = models.IntegerField(label='3. A man buys a pig for $60, sells it for $70, buys it back for $80, and sells it finally for $90. How much has he made?',)
-    cat4 = models.StringField(widget=widgets.RadioSelect, label="4. Simon decided to invest $8,000 in the stock market one day early in 2008. Six months after he invested, on July 17, the stocks he had purchased October 17, the stocks he had purchased went up 75%. At this point, how much does Simon have?", choices = ((1,'broken even in the stock market'), (2,'is ahead of where he began'), (3,'has lost money')))
+    cat4 = models.StringField(widget=widgets.RadioSelect, label="4. Simon decided to invest $8,000 in the stock market one day early in 2008. Six months after he invested, on July 17, the stocks went down by 50%. Three months later, on October 17, the stocks went up 75%. At this point, what has happened to the $8,000 Simon invested?", choices = ((1,'broken even in the stock market'), (2,'is ahead of where he began'), (3,'has lost money')))
 
     # NT
     nt1 = models.FloatField(min=0,max=1,label='1. Out of 1,000 people in a small town 500 are members of a choir. Out of these 500 members in the choir 100 are men. Out of the 500 inhabitants that are not in the choir 300 are men. What is the probability that a randomly drawn man is a member of the choir?',)
