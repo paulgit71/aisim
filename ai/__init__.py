@@ -114,6 +114,7 @@ class Player(BasePlayer):
     Q40b = models.IntegerField()
     
     # demographic questions
+    Q80 = models.CharField(max_length=40, label='What is Your Prolific ID:', blank=True)
     Q41 = models.StringField(widget=widgets.RadioSelect, label='What is the highest level of education you have completed or currently pursuing?',choices=((1,'Less than high school'),(2,'High school graduate'),(3,'Some college '),(4,'4 year degree'),(5,'Professional degree (e.g. JD, MD, etc)'),(6,'Masters'),(7,'Doctorate')))
     Q42 = models.IntegerField(label='What is your age?', min=18, max=120)
     Q43 = models.StringField(widget=widgets.RadioSelect, label='What is your current annual level of income?',choices=((1, 'Less than $20,000'), (2, '$20,000 - $39,999'), (3, '$40,000 - $59,999'), (4, '$60,000 - $79,999'), (5, '$80,000 - $99,999'), (11, '$100,000 - $149,999'), (12, 'More than $150,000')))
@@ -667,7 +668,7 @@ class Block6(ConsentOk):
     template_name = "ai/Survey.html"
 
     form_model = 'player'
-    form_fields = ['Q41', 'Q42', 'Q43', 'Q44','Q44_1', 'Q45']
+    form_fields = ['Q80', 'Q41', 'Q42', 'Q43', 'Q44','Q44_1', 'Q45']
 
     @staticmethod
     def is_displayed(player):
